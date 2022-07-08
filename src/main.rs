@@ -21,7 +21,9 @@ fn main() {
          command3.args(["push"]);
          command3.output().unwrap();
 
-
+        println!("Added everything");
+        println!("Committed with message: {}", args.message);
+        println!("Pushed to remote");
       },
       _ => println!("unknown command"),
    }
