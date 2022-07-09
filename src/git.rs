@@ -30,6 +30,7 @@ pub fn git_cli(args: DoArgs) {
             for branch in branches.split("\n") {
                 if branch.to_lowercase().contains(&args.message.to_lowercase()) {
                     let mut checkout = Command::new("git");
+                    println!("Checking out branch: {}", branch);
                     checkout.args(["checkout", branch]);
                     checkout.output().unwrap();
                     return;
