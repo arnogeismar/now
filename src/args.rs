@@ -7,6 +7,5 @@ pub struct DoArgs {
     pub command: String,
 
     // The message!
-    #[clap(short, long, default_value = "")]
     pub message: String,
 }
